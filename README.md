@@ -7,4 +7,4 @@ https://github.com/MeganeBoujeant/TpGit.git
 https://github.com/MeganeBoujeant/pymetacline_copie.git
 
 ## TP3 - P.O.O.
-Créer une liste chainnée, avec les objets node et un objet chained list
+Create a chained list, with node objects and a chained list object
