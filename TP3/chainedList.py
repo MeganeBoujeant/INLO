@@ -29,13 +29,16 @@ class ChainedList:
         node_list.append(node.data)
         return str(node_list)
 
-    def insert_node_after(self, data, new_node_data):
-        """ Insert a new node with data == new_node_data, after the node with the value == data
+    def insert_node_after(self, data: int, new_node_data: int):
+        """ Insert a new node with data == new_node_data, after the node with
+        the value == data
 
         Parameters
         ----------
-        data : searched data
-        new_node_data : node to insert
+        data : int
+            searched data (whose we want insert new node after her)
+        new_node_data : int
+            new node to insert
         """
         node = self.first_node
         while node.data != data:
@@ -45,17 +48,22 @@ class ChainedList:
         node.link = new_node
         new_node.link = node_after_add
 
-    def delete_node(self, data):
-        """
-        delete all node(s) value == data
+    def delete_node(self, data: int):
+        """ Delete all node(s) value == data
 
         Parameters
         ----------
         data : searched data to delete
+        """
+
+        while self.first_node == data:
+            self.first_node = self.first_node.link
 
         node = self.first_node
-        while node.data != data:
-            before = node
+
+        while node.link:
+            if node.data == data:
+                before = node
+                node = node.link
+                before.link = node.link.link
             node = node.link
-        before.link = node.link.link
-        """
