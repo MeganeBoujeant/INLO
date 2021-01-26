@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from node import Node
-from chainedList import ChainedList
+from chainedList import *
 
 
 def test_print_node():
@@ -24,8 +24,12 @@ def test_print_5_nodes():
     n4.link = n5
     print(n1)
 
+
 if __name__ == "__main__":
     # just a test to see how the __str__ method of node work's
-    ## test_print_node()
-    test_print_5_nodes()
-    ##chained_list = ChainedList([1, 5, 6, 12, 34])
+    ## test_print_5_nodes()
+    crea_list = test_print_node()
+    chained_list = ChainedList.insert_node_after(crea_list, 5, 12)
+    print(chained_list)
+    chained_list = ChainedList.insert_node_after(crea_list, 5, 6)
+    print(chained_list)
