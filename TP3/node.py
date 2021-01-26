@@ -3,7 +3,7 @@
 
 class Node:
 
-	def __init__(self, param_data):
+	def __init__(self, param_data:int):
 		self.data = param_data
 		self.link = None
 
@@ -15,4 +15,3 @@ class Node:
 			node = node.link
 		node_list.append(node.data)
 		return str(node_list)
-
