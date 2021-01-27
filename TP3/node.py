@@ -1,7 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+    Author : Mégane Boujeant
+"""
+
 class Node:
+    """ Node Object
+
+    Parameters
+    ----------
+    param_data : int
+        value of Node Object
+    """
 
     def __init__(self, param_data: int):
         self.data = param_data
