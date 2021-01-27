@@ -12,7 +12,6 @@ class ChainedList:
     list_data : list
         list of data that we want to transfert in a chained list of Node object
     """
-
     def __init__(self, list_data: list):
         self.first_node = Node(list_data[0])
         node = self.first_node
@@ -49,21 +48,27 @@ class ChainedList:
         new_node.link = node_after_add
 
     def delete_node(self, data: int):
-        """ Delete all node(s) value == data
+        """ Delete all node(s) when value == data
 
         Parameters
         ----------
-        data : searched data to delete
+        data : int
+            searched data to delete
         """
-
-        while self.first_node == data:
+        while self.first_node.data == data:
             self.first_node = self.first_node.link
 
-        node = self.first_node
+        node_before = self.first_node
+        node = self.first_node.link
 
         while node.link:
             if node.data == data:
-                before = node
+                node_before.link = node.link
+                node = node_before.link
+            else:
+                node_before = node_before.link
                 node = node.link
-                before.link = node.link.link
-            node = node.link
+
+        if node.link is None:
+            if node.data == data:
+                node_before.link = None
