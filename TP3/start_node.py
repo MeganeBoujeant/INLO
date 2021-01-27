@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from node import Node
-from chainedList import ChainedList
+from chained_list import ChainedList
 
 
 def test_print_node():
