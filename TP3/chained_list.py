@@ -45,6 +45,7 @@ class ChainedList:
         """
         node = self.first_node
         while node.data != data:
+<<<<<<< Updated upstream
             node = node.link
         if node.data == data:   # Test of the exceptional case where no value
                                 # in the chained list corresponds to data
@@ -52,6 +53,16 @@ class ChainedList:
             new_node = Node(new_node_data)
             node.link = new_node
             new_node.link = node_after_add
+=======
+            if node.link == None:
+                return
+            else:
+                node = node.link
+        node_after_add = node.link
+        new_node = Node(new_node_data)
+        node.link = new_node
+        new_node.link = node_after_add
+>>>>>>> Stashed changes
 
     def delete_node(self, data: int):
         """ Delete all node(s) when value == data

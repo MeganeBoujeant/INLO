@@ -42,9 +42,15 @@ def test_insert_value_chained_list(list_to_transform: list):
     chained_list.insert_node_after(5, 6)
     print("[Chained List after new add ]" + str(chained_list))
 
+<<<<<<< Updated upstream
     # Test with data value which don't exist
     chained_list.insert_node_after(845, 6)
     print("[Chained List after new add ]" + str(chained_list))
+=======
+    chained_list.insert_node_after(845, 2)
+    print(chained_list)
+
+>>>>>>> Stashed changes
 
 def test_delete_function(list_to_transform: list, data_to_delete: int):
     """ Function to test the deletion of all node(s) with data_to_delete value
