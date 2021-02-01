@@ -7,6 +7,7 @@
 
 from tree_node import TreeNode
 
+
 class Tree:
     """ Tree of Node Object
     """
@@ -21,10 +22,7 @@ class Tree:
         print(self.root_node)
 
     def add_node(self, added_node, target_node):
-<<<<<<< Updated upstream
-=======
         pass
 
-    def delete_node(selfself, target_node):
->>>>>>> Stashed changes
+    def delete_node(self, target_node):
         pass

@@ -35,7 +35,8 @@ class TreeNode:
         if self.is_leaf():
             return str(self.data)
         else:
-            return "[ " + str(self.left_child) + " ; " + str(self.right_child) + " ] " + str(self.data)
+            return "[ " + str(self.left_child) + " ; " + str(self.right_child) \
+                   + " ] " + str(self.data)
 
     def create_tree(self):
         pass
