@@ -21,4 +21,10 @@ class Tree:
         print(self.root_node)
 
     def add_node(self, added_node, target_node):
+<<<<<<< Updated upstream
+=======
+        pass
+
+    def delete_node(selfself, target_node):
+>>>>>>> Stashed changes
         pass

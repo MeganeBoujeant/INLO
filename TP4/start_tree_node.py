@@ -9,7 +9,11 @@ from tree_node import TreeNode
 from tree_node_2 import Tree
 
 
+<<<<<<< Updated upstream
 if __name__ == "__main__":
+=======
+def arbre_cours():
+>>>>>>> Stashed changes
     node_0 = TreeNode("Leonardo")
     node_1 = TreeNode("L1")
     node_2 = TreeNode("L2")
@@ -22,4 +26,30 @@ if __name__ == "__main__":
     print(node_1.is_leaf())
 
     arbre = Tree(node_0)
+<<<<<<< Updated upstream
     arbre.transversal_deep()
+=======
+    arbre.transversal_deep()
+
+def arbre_essai_function():
+    node_0 = TreeNode(1)
+    node_1 = TreeNode(2)
+    node_2 = TreeNode(3)
+    node_0.left_child = node_1
+    node_0.right_child = node_2
+    node_3 = TreeNode(4)
+    node_4 = TreeNode(5)
+    node_1.left_child = node_3
+    node_1.right_child = node_4
+    node_5 = TreeNode(6)
+    node_6 = TreeNode(7)
+    node_2.left_child = node_5
+    node_2.right_child = node_6
+
+    arbre = Tree(node_0)
+    arbre.transversal_deep()
+
+if __name__ == "__main__":
+    arbre_cours()
+    arbre = arbre_essai_function()
+>>>>>>> Stashed changes
