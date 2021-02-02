@@ -38,5 +38,21 @@ class TreeNode:
             return "[ " + str(self.left_child) + " ; " + str(self.right_child) \
                    + " ] " + str(self.data)
 
+    def visit_right(self):
+        return self.right_child
+
+    def visit_left(self):
+        return self.left_child
+
+    def add_after(self, value_new_node):
+        if self.right_child == None:
+            self.right_child = TreeNode(value_new_node)
+        elif self.left_child == None:
+            self.left_child = TreeNode(value_new_node)
+        else:
+            old_right_child = self.right_child
+            self.right_child = TreeNode(value_new_node)
+            self.right_child.right_child = old_right_child
+
     def create_tree(self):
         pass

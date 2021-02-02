@@ -43,9 +43,15 @@ def tree_to_try_function():
     node_2.right_child = node_6
 
     arbre = Tree(node_0)
-    arbre.transversal_deep()
 
+    return arbre
 
 if __name__ == "__main__":
-    tree_course()
+    # tree_course()
     tree = tree_to_try_function()
+    tree.transversal_deep()
+    tree.add_node("1bis", 1)    # try add node after first node of tree
+    tree.add_node("2bis", 2)    # try add node after medium node
+    tree.add_node("6bis", 6)    # try add node after last node of tree
+    tree.add_node("Jamais", 45) # try add node after inexistant node
+    tree.transversal_deep()
