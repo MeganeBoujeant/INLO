@@ -45,14 +45,47 @@ class TreeNode:
         return self.left_child
 
     def add_after(self, value_new_node):
-        if self.right_child == None:
+        if not self.right_child:
             self.right_child = TreeNode(value_new_node)
-        elif self.left_child == None:
+        elif not self.left_child:
             self.left_child = TreeNode(value_new_node)
         else:
             old_right_child = self.right_child
             self.right_child = TreeNode(value_new_node)
             self.right_child.right_child = old_right_child
+
+    def del_node(self, parent_node, r_or_l):
+        if self.is_leaf():
+            if r_or_l == "r":
+                parent_node.right_child = None
+            else:
+                parent_node.left_child = None
+
+        elif self.right_child and not self.left_child:
+            if r_or_l == "r":
+                parent_node.right_child = self.right_child
+                self.right_child = None
+            else:
+                parent_node.left_child = self.right_child
+                self.right_child = None
+
+        elif not self.right_child and self.left_child:
+            if r_or_l == "r":
+                parent_node.right_child = self.left_child
+                self.left_child = None
+            else:
+                parent_node.left_child = self.left_child
+                self.left_child = None
+
+        else:
+        # 2 child -> replace by last right chils which don't have any child
+            r_child = parent_node.right_child
+            while r_child.right_child:
+                parent = r_child
+                r_child = r_child.right_child
+            replace_node = r_child
+            self.data = replace_node.data
+            parent.right_child = None
 
     def create_tree(self):
         pass

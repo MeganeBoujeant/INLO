@@ -50,8 +50,16 @@ if __name__ == "__main__":
     # tree_course()
     tree = tree_to_try_function()
     tree.transversal_deep()
+    print("add 4 nodes :")
     tree.add_node("1bis", 1)    # try add node after first node of tree
     tree.add_node("2bis", 2)    # try add node after medium node
     tree.add_node("6bis", 6)    # try add node after last node of tree
     tree.add_node("Jamais", 45) # try add node after inexistant node
+    tree.transversal_deep()
+    print("delete :")
+    tree.delete_node("6bis")
+    tree.transversal_deep()
+    tree.delete_node("1bis")
+    tree.transversal_deep()
+    tree.delete_node(3)
     tree.transversal_deep()
