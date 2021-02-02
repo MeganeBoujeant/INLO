@@ -39,12 +39,23 @@ class TreeNode:
                    + " ] " + str(self.data)
 
     def visit_right(self):
+        """ Function to return right child
+        """
         return self.right_child
 
     def visit_left(self):
+        """ Function to return left child
+        """
         return self.left_child
 
     def add_after(self, value_new_node):
+        """ Function to add a new node after a target node
+
+        Parameters
+        ----------
+        value_new_node:
+            value of the new node that we want to insert
+        """
         if not self.right_child:
             self.right_child = TreeNode(value_new_node)
         elif not self.left_child:
@@ -55,6 +66,15 @@ class TreeNode:
             self.right_child.right_child = old_right_child
 
     def del_node(self, parent_node, r_or_l):
+        """ Function to delete a target node.
+
+        Parameters
+        ----------
+        parent_node:
+            parent node of the child that we want to delete
+        r_or_l:
+            right or left child that we want delete
+        """
         if self.is_leaf():
             if r_or_l == "r":
                 parent_node.right_child = None
@@ -86,6 +106,3 @@ class TreeNode:
             replace_node = r_child
             self.data = replace_node.data
             parent.right_child = None
-
-    def create_tree(self):
-        pass

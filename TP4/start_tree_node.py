@@ -10,6 +10,8 @@ from tree_node_2 import Tree
 
 
 def tree_course():
+    """ Function that we have done in the course.
+    """
     node_0 = TreeNode("Leonardo")
     node_1 = TreeNode("L1")
     node_2 = TreeNode("L2")
@@ -28,6 +30,8 @@ def tree_course():
 
 
 def tree_to_try_function():
+    """ Function which make tree.
+    """
     node_0 = TreeNode(1)
     node_1 = TreeNode(2)
     node_2 = TreeNode(3)
