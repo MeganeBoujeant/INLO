@@ -1,5 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+	Title: Example of course with french comments to understand
+
+	Lors de l'execution des tests unitaires, si on veut voir le détail, on
+	rajoute -v
+"""
+
+import sys
+sys.path.append("..")
 import mymath
 import unittest
+
 
 class TestAdd(unittest.TestCase):
 	"""
@@ -12,6 +25,8 @@ class TestAdd(unittest.TestCase):
 		"""
 		result = mymath.add(1, 2)
 		self.assertEqual(result, 3)
+		# assertEqual est une méthode de la classe TestCase qui dit quel est
+		# censé être le résultat du test effectué
 
 	def test_add_floats(self):
 		"""
