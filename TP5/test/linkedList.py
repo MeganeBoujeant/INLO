@@ -8,16 +8,32 @@ class Node:
     def __repr__(self):
         return self.data
 
+
 class LinkedList:
     """ Linked list """
     def __init__(self, nodes=None):
         self.head = None
-        if nodes is not None:
+        if nodes is not None and len(nodes) != 0:
             node = Node(data=nodes.pop(0))
             self.head = node
             for elem in nodes:
                 node.next = Node(data=elem)
                 node = node.next
+
+    def get(self, index):
+        if not self.head:
+            raise ValueError("node is empty")
+        else:
+            leonardo_recurs(index, self.head)
+
+    def leonardo_recurs(self, index, work_node):
+        print(index, work_node)
+        if not work_node:
+            return work_node
+        elif index == 0:
+            return work_node
+        else:
+            return self.leonardo_recurs(index-1, work_node.next)
 
     def add_after(self, data, new_node):
         if not self.head:

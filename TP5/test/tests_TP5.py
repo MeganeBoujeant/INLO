@@ -18,8 +18,8 @@
                 print("You have an error")
 """
 
-from tree_node import TreeNode
-from tree_node_2 import Tree
+from linkedList import LinkedList
 
 
-
+if __name__ == "__main__":
+    pass
