@@ -10,4 +10,9 @@ https://github.com/MeganeBoujeant/TpGit.git
 https://github.com/MeganeBoujeant/pymetacline_copie.git
 
 ## TP3 - P.O.O.
-Create a chained list, with node objects and a chained list object
+Create a chained list, with node objects and a chained list object.
+
+## TP4 - Binary tree node
+Create insert_node and delete_node functions.
+
+## TP5 - unitary tests and exceptions
