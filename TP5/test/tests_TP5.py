@@ -18,8 +18,8 @@
                 print("You have an error")
 """
 
-from linkedList import Node, LinkedList
 import unittest
+from linkedList import Node, LinkedList
 
 
 class TestLinkedList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestLinkedList(unittest.TestCase):
         self.assertIsNone(empty_list, "The list is empty.")
 
     def test_add_pile_is_empty(self):
-        """ Test 2 : test if a pile on which have just stacked an element is 
+        """ Test 2 : test if a pile on which have just stacked an element is
         not empty """
         self.linked_list.add_after('b', Node('f'))
         self.assertIsNotNone(self.linked_list, "Your list is empty")
@@ -46,12 +46,13 @@ class TestLinkedList(unittest.TestCase):
         list_changed = self.linked_list
         list_changed.add_after('d', Node('g'))
         list_changed.remove_node('g')
-        self.assertEqual(list_changed, self.linked_list, "The final list is not the same that the start chained list")
+        self.assertEqual(list_changed, self.linked_list, "The final list is not\
+         the same that the start chained list")
 
     def test_added_top_is_top(self):
-        """ Test 4 : the top of a pile on which we have just stacked an element 
+        """ Test 4 : the top of a pile on which we have just stacked an element
         e is e """
-        self.linked_list.add_first('m')
+        self.linked_list.add_first(Node('m'))
         self.assertEqual(self.linked_list.head, 'm', "fist is not first")
 
     def tearDown(self):

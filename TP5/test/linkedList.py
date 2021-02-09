@@ -83,8 +83,6 @@ class LinkedList:
 
         raise Exception("Node with data '{}' not found".format(data))
 
-
-
     def add_first(self, node_to_add):
         node_to_add.next = self.head
         self.head = node_to_add
