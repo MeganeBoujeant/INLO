@@ -24,7 +24,7 @@ class LinkedList:
         if not self.head:
             raise ValueError("node is empty")
         else:
-            leonardo_recurs(index, self.head)
+            self.leonardo_recurs(index, self.head)
 
     def leonardo_recurs(self, index, work_node):
         print(index, work_node)
