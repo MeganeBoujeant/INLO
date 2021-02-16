@@ -7,11 +7,10 @@
 
 
 from tkinter import Tk, Label, StringVar, Entry, Button, messagebox, Listbox
-from tkinter.ttk import Combobox
 from individu import Individu
 
 
-class window(Tk):
+class Window(Tk):
     """ Class of Graphical Interface for user which would consult the phone
     book """
 
@@ -90,8 +89,8 @@ class window(Tk):
                 results.grid(row=(len(self.label_list)+2), column=1)
         else:
             messagebox.showwarning(title="Warning !",
-                                message="Please, enter name to make a research \
-                                of record.")
+                                   message="Please, enter name to make a \
+                                   research of record.")
 
     def erase(self):
         erase_name = self.widgets_entry['name'].get()
@@ -100,9 +99,9 @@ class window(Tk):
             e = 0
             for key, value in self.dict_record.items():
                 if key == erase_name:
-                    messagebox.askyesno(title='Warning',
+                    want_del = messagebox.askyesno(title='Warning',
                                                    message=('Do you want delete\
-                                                    :' + key + value.__str__))
+                                                    :' + str(key) + str(value)))
                     if want_del:
                         self.dict_record.pop(key)
                     e += 1
@@ -112,9 +111,10 @@ class window(Tk):
                                     research.")
         else:
             messagebox.showwarning(title="Warning !",
-                                message="Please, enter name to delete record.")
+                                   message="Please, enter name to delete \
+                                   record.")
 
 
 if __name__ == '__main__':
-    app = window()
+    app = Window()
     app.mainloop()
