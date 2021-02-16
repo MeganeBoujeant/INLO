@@ -19,6 +19,7 @@
 """
 
 import unittest
+import copy
 from linkedList import Node, LinkedList
 
 
@@ -43,7 +44,7 @@ class TestLinkedList(unittest.TestCase):
     def test_add_delete_is_equal(self):
         """ Test 3 : a chained list that undergoes stacking followed by
         unstacking is unchanged"""
-        list_changed = self.linked_list
+        list_changed = copy.deepcopy(self.linked_list)
         list_changed.add_after('d', Node('g'))
         list_changed.remove_node('g')
         self.assertEqual(list_changed, self.linked_list, "The final list is not\

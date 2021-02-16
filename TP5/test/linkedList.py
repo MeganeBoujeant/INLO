@@ -112,3 +112,7 @@ class LinkedList:
         while node is not None:
             yield node
             node = node.next
+
+    def __equal__(self):
+        """ faire methode qui compare le contenu de 2 objets """
+        pass
