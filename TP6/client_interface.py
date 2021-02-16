@@ -6,7 +6,7 @@
 """
 
 
-from tkinter import Tk, Label, StringVar, Entry, Button, messagebox
+from tkinter import Tk, Label, StringVar, Entry, Button, messagebox, Listbox
 from tkinter.ttk import Combobox
 from individu import Individu
 
@@ -53,8 +53,9 @@ class window(Tk):
 
             j += 1
 
-        self.widgets_button['insert'].config(command=self.get_fields())
-        self.widgets_button['search'].config(command=self.search())
+        self.widgets_button['insert'].config(command=self.get_fields)
+        self.widgets_button['search'].config(command=self.search)
+        self.widgets_button['erase'].config(command=self.erase)
 
     def get_fields(self):
         i = Individu(self.widgets_entry['name'].get(),
@@ -63,28 +64,55 @@ class window(Tk):
                      self.widgets_entry['adress'].get(),
                      self.widgets_entry['city'].get())
         self.dict_record[self.widgets_entry['name'].get()] = i
-        print(self.dict_record)
 
     def search(self):
         search_name = self.widgets_entry['name'].get()
 
         if search_name:
-            k = 0
+            s = 0
             list_of_results = []
             for key, value in self.dict_record.items():
                 if key == search_name:
-                    k += 1
+                    s += 1
                     list_of_results.append(value)
-            if k == 0:
+            if s == 0:
                 messagebox.showinfo(title="No result !",
                                     message="No name correspond to your \
                                     research.")
             else:
-                results = Combobox(self, values=list_of_results)
-                results.pack()
+                self.geometry('500x280')
+                results = Listbox(self, height=5, width=40,
+                                  selectbackground='pink')
+                index = 0
+                for element in list_of_results:
+                    results.insert(index, element)
+                    index += 1
+                results.grid(row=(len(self.label_list)+2), column=1)
         else:
-            messagebox.showinfo(title="Warning !", message="Please, enter name \
-                                to make a reserch of record.")
+            messagebox.showwarning(title="Warning !",
+                                message="Please, enter name to make a research \
+                                of record.")
+
+    def erase(self):
+        erase_name = self.widgets_entry['name'].get()
+
+        if erase_name:
+            e = 0
+            for key, value in self.dict_record.items():
+                if key == erase_name:
+                    messagebox.askyesno(title='Warning',
+                                                   message=('Do you want delete\
+                                                    :' + key + value.__str__))
+                    if want_del:
+                        self.dict_record.pop(key)
+                    e += 1
+            if e == 0:
+                messagebox.showinfo(title="No result !",
+                                    message="No name correspond to your \
+                                    research.")
+        else:
+            messagebox.showwarning(title="Warning !",
+                                message="Please, enter name to delete record.")
 
 
 if __name__ == '__main__':
