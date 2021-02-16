@@ -30,6 +30,7 @@ class Window(Tk):
         self.main_page()
 
     def main_page(self):
+        """ This method allows to have the main view of the interface. """
         i, j = 0, 0
 
         for element in self.label_list:
@@ -57,6 +58,7 @@ class Window(Tk):
         self.widgets_button['erase'].config(command=self.erase)
 
     def get_fields(self):
+        """ This method allows to insert a new individu in the Annuaire. """
         i = Individu(self.widgets_entry['name'].get(),
                      self.widgets_entry['last_name'].get(),
                      self.widgets_entry['phone'].get(),
@@ -65,16 +67,17 @@ class Window(Tk):
         self.dict_record[self.widgets_entry['name'].get()] = i
 
     def search(self):
+        """ This method allows to search if a name is in the Annuaire. """
         search_name = self.widgets_entry['name'].get()
 
         if search_name:
-            s = 0
+            s_nb = 0
             list_of_results = []
             for key, value in self.dict_record.items():
                 if key == search_name:
-                    s += 1
+                    s_nb += 1
                     list_of_results.append(value)
-            if s == 0:
+            if s_nb == 0:
                 messagebox.showinfo(title="No result !",
                                     message="No name correspond to your \
                                     research.")
@@ -93,19 +96,20 @@ class Window(Tk):
                                    research of record.")
 
     def erase(self):
+        """ This method allows to erase a name is in the Annuaire. """
         erase_name = self.widgets_entry['name'].get()
 
         if erase_name:
-            e = 0
+            e_nb = 0
             for key, value in self.dict_record.items():
                 if key == erase_name:
                     want_del = messagebox.askyesno(title='Warning',
                                                    message=('Do you want delete\
-                                                    :' + str(key) + str(value)))
+                                                    :' + str(key)))
                     if want_del:
                         self.dict_record.pop(key)
-                    e += 1
-            if e == 0:
+                    e_nb += 1
+            if e_nb == 0:
                 messagebox.showinfo(title="No result !",
                                     message="No name correspond to your \
                                     research.")
