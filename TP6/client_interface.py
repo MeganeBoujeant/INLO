@@ -6,7 +6,8 @@
 """
 
 
-from tkinter import *
+from tkinter import Tk, Label, StringVar, Entry, Button, messagebox
+from tkinter.ttk import Combobox
 from individu import Individu
 
 
@@ -18,46 +19,72 @@ class window(Tk):
         Tk.__init__(self)
         self.geometry('400x200')
         self.title("Annuaire")
+
+        self.label_list = ['name', 'last_name', 'phone', 'adress', 'city']
+        self.button = ["search", "insert", "erase"]
+
+        self.widgets_labs = {}
+        self.widgets_entry = {}
+        self.widgets_button = {}
+        self.dict_record = {}
+
         self.main_page()
 
     def main_page(self):
-        """ """
-        label_list = ['name', 'last name', 'phone', 'adress', 'city']
-        button = ["search", "insert", "erase"]
-
-        widgets_labs = {}
-        widgets_entry = {}
-        widgets_button = {}
-
         i, j = 0, 0
 
-        for element in label_list:
+        for element in self.label_list:
 
             label = Label(self, text=element)
-            widgets_labs[element] = label
+            self.widgets_labs[element] = label
             label.grid(row=i, column=0)
 
             var = StringVar()
             entry = Entry(self, text=var)
-            widgets_entry[element] = entry
+            self.widgets_entry[element] = entry
             entry.grid(row=i, column=1)
 
             i += 1
 
-        for idi in button:
+        for idi in self.button:
             button = Button(self, text=idi)
-            widgets_button[idi] = button
+            self.widgets_button[idi] = button
             button.grid(row=i + 1, column=j)
 
             j += 1
 
-        widgets_button['insert'].config(command=lambda: self.get_fields(widgets_entry))
+        self.widgets_button['insert'].config(command=self.get_fields())
+        self.widgets_button['search'].config(command=self.search())
 
-    def get_fields(self, widgets_entry):
-        dico = {}
-        i = Individu(widgets_entry['name'].get(), widgets_entry['last_name'].get(), widgets_entry['phone'].get(), widgets_entry['adress'].get(), widgets_entry['city'].get())
-        dico[widgets_entry['name'].get()] = i
-        print(i)
+    def get_fields(self):
+        i = Individu(self.widgets_entry['name'].get(),
+                     self.widgets_entry['last_name'].get(),
+                     self.widgets_entry['phone'].get(),
+                     self.widgets_entry['adress'].get(),
+                     self.widgets_entry['city'].get())
+        self.dict_record[self.widgets_entry['name'].get()] = i
+        print(self.dict_record)
+
+    def search(self):
+        search_name = self.widgets_entry['name'].get()
+
+        if search_name:
+            k = 0
+            list_of_results = []
+            for key, value in self.dict_record.items():
+                if key == search_name:
+                    k += 1
+                    list_of_results.append(value)
+            if k == 0:
+                messagebox.showinfo(title="No result !",
+                                    message="No name correspond to your \
+                                    research.")
+            else:
+                results = Combobox(self, values=list_of_results)
+                results.pack()
+        else:
+            messagebox.showinfo(title="Warning !", message="Please, enter name \
+                                to make a reserch of record.")
 
 
 if __name__ == '__main__':
