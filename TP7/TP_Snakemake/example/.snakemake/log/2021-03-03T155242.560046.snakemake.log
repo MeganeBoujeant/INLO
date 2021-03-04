@@ -1,0 +1,13 @@
+Building DAG of jobs...
+MissingInputException in line 8 of /Users/megane/Documents/GitHub/INLO/TP7/TP_Snakemake/example/Snakemake.smk:
+Missing input files for rule final:
+step_4/S1.txt
+step_4/S5.txt
+step_4/S7.txt
+step_4/S6.txt
+step_4/S3.txt
+step_4/S8.txt
+step_4/S9.txt
+step_4/S0.txt
+step_4/S2.txt
+step_4/S4.txt

@@ -1,0 +1,230 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	final
+	10	step_1
+	10	step_2
+	21
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S0.txt
+    jobid: 11
+    wildcards: smp=S0
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 11.
+1 of 21 steps (5%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S0.txt
+    output: step_2/S0.txt
+    jobid: 1
+    wildcards: smp=S0
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 1.
+2 of 21 steps (10%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S2.txt
+    jobid: 13
+    wildcards: smp=S2
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 13.
+3 of 21 steps (14%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S2.txt
+    output: step_2/S2.txt
+    jobid: 3
+    wildcards: smp=S2
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 3.
+4 of 21 steps (19%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S4.txt
+    jobid: 15
+    wildcards: smp=S4
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 15.
+5 of 21 steps (24%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S4.txt
+    output: step_2/S4.txt
+    jobid: 5
+    wildcards: smp=S4
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 5.
+6 of 21 steps (29%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S6.txt
+    jobid: 17
+    wildcards: smp=S6
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 17.
+7 of 21 steps (33%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S6.txt
+    output: step_2/S6.txt
+    jobid: 7
+    wildcards: smp=S6
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 7.
+8 of 21 steps (38%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S8.txt
+    jobid: 19
+    wildcards: smp=S8
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 19.
+9 of 21 steps (43%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S8.txt
+    output: step_2/S8.txt
+    jobid: 9
+    wildcards: smp=S8
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 9.
+10 of 21 steps (48%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S3.txt
+    jobid: 14
+    wildcards: smp=S3
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 14.
+11 of 21 steps (52%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S3.txt
+    output: step_2/S3.txt
+    jobid: 4
+    wildcards: smp=S3
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 4.
+12 of 21 steps (57%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S1.txt
+    jobid: 12
+    wildcards: smp=S1
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 12.
+13 of 21 steps (62%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S1.txt
+    output: step_2/S1.txt
+    jobid: 2
+    wildcards: smp=S1
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 2.
+14 of 21 steps (67%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S5.txt
+    jobid: 16
+    wildcards: smp=S5
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 16.
+15 of 21 steps (71%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S5.txt
+    output: step_2/S5.txt
+    jobid: 6
+    wildcards: smp=S5
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 6.
+16 of 21 steps (76%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S7.txt
+    jobid: 18
+    wildcards: smp=S7
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 18.
+17 of 21 steps (81%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S7.txt
+    output: step_2/S7.txt
+    jobid: 8
+    wildcards: smp=S7
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 8.
+18 of 21 steps (86%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_1:
+    output: step_1/S9.txt
+    jobid: 20
+    wildcards: smp=S9
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 20.
+19 of 21 steps (90%) done
+
+[Wed Mar  3 15:48:38 2021]
+rule step_2:
+    input: step_1/S9.txt
+    output: step_2/S9.txt
+    jobid: 10
+    wildcards: smp=S9
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 10.
+20 of 21 steps (95%) done
+
+[Wed Mar  3 15:48:38 2021]
+localrule final:
+    input: step_2/S0.txt, step_2/S1.txt, step_2/S2.txt, step_2/S3.txt, step_2/S4.txt, step_2/S5.txt, step_2/S6.txt, step_2/S7.txt, step_2/S8.txt, step_2/S9.txt
+    jobid: 0
+
+[Wed Mar  3 15:48:38 2021]
+Finished job 0.
+21 of 21 steps (100%) done
+Complete log: /Users/megane/Documents/GitHub/INLO/TP7/TP_Snakemake/example/.snakemake/log/2021-03-03T154838.178309.snakemake.log

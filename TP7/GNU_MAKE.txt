@@ -1,0 +1,12 @@
+file_03.txt: file_02.txt
+	@echo “creating file 03”
+	@touch file_03.txt
+
+file_01.txt:
+	@echo "creating file 01"
+	@touch file_01.txt
+
+file_02.txt: file_01.txt
+	@echo "creating file 02"
+	@touch file_02.txt
+

@@ -1,0 +1,3 @@
+NameError in line 11 of /Users/megane/Documents/GitHub/INLO/TP7/TP_Snakemake/example/Snakemake.smk:
+name 'SAMPLE_DICT' is not defined
+  File "/Users/megane/Documents/GitHub/INLO/TP7/TP_Snakemake/example/Snakemake.smk", line 11, in <module>
