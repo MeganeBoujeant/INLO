@@ -18,3 +18,7 @@ Create insert_node and delete_node functions.
 ## TP5 - unitary tests and exceptions
 
 ## TP6 - MVC
+
+## TP7 - Snakemake
+
+## TP8 - Python-SQL --> mysql.connector module
