@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-01T12:26:17.721Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="Ab9z_AWOXP1M08B1yGXz" version="14.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-01T12:33:32.519Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="LhIl_hUUUsR_Yrm2-vUI" version="14.6.0" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="825" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -8,19 +8,19 @@
           <mxGeometry x="365" y="40" width="105" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="660" y="410" width="50" height="30" as="geometry" />
+          <mxGeometry x="690" y="570" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-3" value="Script Python" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="710" y="415" width="90" height="20" as="geometry" />
+          <mxGeometry x="740" y="575" width="90" height="20" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-4" value="IMEx_human_interactions.txt" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="210" y="110" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-5" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="660" y="450" width="50" height="30" as="geometry" />
+          <mxGeometry x="690" y="610" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-6" value="Fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="720" y="455" width="40" height="20" as="geometry" />
+          <mxGeometry x="750" y="615" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-7" value="Uniprot_taxonomy_bacteria.txt" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="425" y="110" width="190" height="40" as="geometry" />
@@ -36,6 +36,60 @@
             <mxPoint x="427.5" y="80" as="sourcePoint" />
             <mxPoint x="335" y="120" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-10" value="interaction_bact_hum" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="352.5" y="190" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0VMLieRrHJYOJgLP_JIB-4" target="0VMLieRrHJYOJgLP_JIB-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="290" as="sourcePoint" />
+            <mxPoint x="450" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-13" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0VMLieRrHJYOJgLP_JIB-7" target="0VMLieRrHJYOJgLP_JIB-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="160" as="sourcePoint" />
+            <mxPoint x="427.5" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-14" value="bact_hum_interaction.txt" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="260" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-15" value="bact_which_interact.txt" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="260" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-16" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0VMLieRrHJYOJgLP_JIB-10" target="0VMLieRrHJYOJgLP_JIB-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="160" as="sourcePoint" />
+            <mxPoint x="395" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-17" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0VMLieRrHJYOJgLP_JIB-10" target="0VMLieRrHJYOJgLP_JIB-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="170" as="sourcePoint" />
+            <mxPoint x="405" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-18" value="redundancy_removal" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="370" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-19" value="&lt;font color=&quot;#cc0066&quot;&gt;Étape 1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="387.5" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-20" value="&lt;font color=&quot;#cc0066&quot;&gt;Étape 2&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="387.5" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-21" value="redundancy_removal" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="370" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-22" value="&lt;font color=&quot;#cc0066&quot;&gt;Étape 3&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="387.5" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-23" value="&lt;font color=&quot;#cc0066&quot;&gt;Étape X&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="685" y="650" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-24" value="Etape du workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="745" y="652.5" width="80" height="25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
