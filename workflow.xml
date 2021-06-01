@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-06-01T12:22:46.268Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="4sjHO4yDL7GS13oWxjQi" version="14.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-01T12:26:17.721Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15" etag="Ab9z_AWOXP1M08B1yGXz" version="14.6.0" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="825" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0VMLieRrHJYOJgLP_JIB-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="365" y="60" width="120" height="60" as="geometry" />
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-1" value="download_input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="40" width="105" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="660" y="410" width="50" height="30" as="geometry" />
@@ -13,14 +13,29 @@
         <mxCell id="0VMLieRrHJYOJgLP_JIB-3" value="Script Python" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="710" y="415" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="0VMLieRrHJYOJgLP_JIB-4" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="160" width="120" height="80" as="geometry" />
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-4" value="IMEx_human_interactions.txt" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="110" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-5" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="660" y="450" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0VMLieRrHJYOJgLP_JIB-6" value="Fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="720" y="455" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-7" value="Uniprot_taxonomy_bacteria.txt" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="110" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-8" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0VMLieRrHJYOJgLP_JIB-1" target="0VMLieRrHJYOJgLP_JIB-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="310" as="sourcePoint" />
+            <mxPoint x="450" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0VMLieRrHJYOJgLP_JIB-9" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0VMLieRrHJYOJgLP_JIB-1" target="0VMLieRrHJYOJgLP_JIB-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="427.5" y="80" as="sourcePoint" />
+            <mxPoint x="335" y="120" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
